@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="shortcut icon" href="/Docs/Assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/Style/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<style>
+    .responsiveNav {
+        height: calc(100vh - 70px);
+    }
+</style>
+
+<body>
+
+    <nav class="lg:px-10 p-5 h-[72px] flex items-center justify-center border-b border-black">
+        <div class="lg-w-[1312px] mx-auto w-full flex items-center gap-8 sm:justify-start justify-between">
+            <img src="/Docs/Assets/images/Logo.svg" class="max-w-[70px] w-full" alt="">
+            <a href="#" class="sm:block hidden navUnderLine">Home Page</a>
+            <i class="fa-solid fa-bars text-2xl cursor-pointer fadeIn sm:hidden" id="openNav"></i>
+            <i class="fa-solid fa-x text-xl cursor-pointer fadeIn"  style="display: none;" id="closeNav"></i>
+
+        </div>
+    </nav>
+
+    <!-- responsive -->
+
+    <div class="w-screen responsiveNav transition-all duration-500 bg-white fixed bottom-0 z-50 overflow-hidden  left-0" style="width: 0;" id="responsiveNav">
+
+        <div class="p-5">
+            <ul class="">
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Home Page</a></li>
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Two</a></li>
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Three</a></li>
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Four</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        const responsiveNav = document.getElementById("responsiveNav")
+        const closeNav = document.getElementById("closeNav")
+        const openNav = document.getElementById("openNav")
+
+        openNav.addEventListener('click',()=>{
+            responsiveNav.style.width = "100%"
+            closeNav.style.display = "block"
+            openNav.style.display = "none"
+        })
+        closeNav.addEventListener('click',()=>{
+            responsiveNav.style.width = "0%"
+            openNav.style.display = "block"
+            closeNav.style.display = "none"
+        })
+        
+    </script>
+
+    <div class="lg:px-10 p-4">
+        <div class="max-w-[1320px] w-full mx-auto">
+
+            <div class="flex my-8 items-center justify-center w-full border border-black lg:flex-row flex-col">
+
+                <div class="lg:max-w-[50%] w-full lg:p-10 p-5">
+                    <h1 class="lg:text-[56px] text-[40px] font-bold max-w-[560px] leading-tight w-full">Streamline Your
+                        Product
+                        Listings Effortlessly</h1>
+                    <p class="py-5">Join the waitlist for CatalogBase, the ultimate product listing management software
+                        designed specifically for Etsy sellers. Simplify your inventory management and keep your
+                        listings up-to-date with ease.</p>
+
+                    <div class="flex items-center gap-2 mt-2 mb-4 lg:flex-row flex-col">
+                        <input type="text" class="w-full lg:max-w-[396px] p-3 border border-black"
+                            placeholder="Enter your email" name="" id="">
+                        <button
+                            class="border border-black text-nowrap px-5 py-3 w-full lg:w-auto bg-black text-white transition-all duration-300 hover:text-black hover:bg-white">Join
+                            Waitlist</button>
+                    </div>
+
+                    <p class="text-xs">By clicking Join Waitlist, you're confirming that you agree with our Terms and
+                        Conditions.</p>
+
+                </div>
+                <div class="lg:max-w-[50%] w-full">
+                    <img src="/Docs/Assets/images/header.png" class="w-full" alt="">
+                </div>
+
+            </div>
+
+            <div class="md:py-14 py-6"></div>
+
+            <div class="flex items-center justify-center lg:gap-12 gap-8 w-full lg:flex-row flex-col">
+
+                <div class="lg:max-w-[50%] w-full">
+                    <h1 class="lg:text-[40px] text-[32px] font-bold leading-tight w-full">Transform Your Etsy Shop with
+                        CatalogBase’s Innovative Inventory Management Features</h1>
+                    <p class="pt-5 text-[18px]">CatalogBase empowers Etsy sellers by providing a seamless way to create
+                        digital catalogs filled with high-resolution images and detailed product descriptions.
+                        Effortlessly manage your inventory and keep your listings up-to-date, ensuring your customers
+                        always have the latest information at their fingertips.</p>
+                </div>
+                <div class="lg:max-w-[50%] w-full">
+                    <img src="/Docs/Assets/images/header.png" class="w-full" alt="">
+                </div>
+
+            </div>
+
+            <div class="md:py-14 py-6"></div>
+
+            <div class="flex items-center justify-center lg:gap-14 gap-8 w-full lg:flex-row flex-col">
+
+                <div class="lg:max-w-[50%] w-full">
+                    <img src="/Docs/Assets/images/header.png" class="w-full" alt="">
+                </div>
+                <div class="lg:max-w-[50%] w-full">
+                    <div class="max-w-[616px] w-full">
+                        <p class="font-semibold pb-4">Sync</p>
+                        <h1 class="lg:text-[48px] text-[32px] font-bold leading-tight w-full">Effortless Etsy Sync for
+                            Your Listings</h1>
+                        <p class="pt-5 text-[18px]">Our Etsy sync feature ensures your product listings are always
+                            up-to-date. Say goodbye to manual updates and hello to seamless inventory management.</p>
+
+                        <div
+                            class="flex items-center justify-center w-full lg:flex-row flex-col md:my-10 my-7 md:gap-10 gap-6">
+                            <div class="w-full">
+                                <p class="font-semibold pb-3 lg:text-xl text-lg">Real-Time Updates</p>
+                                <p>Automatically refresh your listings with the latest information from your
+                                    CraftCatalog.</p>
+                            </div>
+                            <div class="w-full">
+                                <p class="font-semibold pb-3 lg:text-xl text-lg">Stay Organized</p>
+                                <p>Easily find and manage your products without the hassle.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="border border-black text-nowrap px-7 py-3 w-full lg:w-auto hover:bg-black hover:text-white transition-all duration-300 text-black bg-white">Learn
+                                More</button>
+                            <button
+                                class=" text-nowrap px-7 py-3 w-full lg:w-auto transition-all flex items-center gap-3 hover:gap-4 duration-300 text-black bg-white">Sign
+                                Up <i class="fa-solid fa-angle-right pt-0.5"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="md:py-14 py-10"></div>
+
+            <div class="flex items-center justify-center lg:gap-14 gap-8 w-full lg:flex-row flex-col">
+
+                <div class="lg:max-w-[50%] w-full">
+                    <div class="max-w-[616px] w-full">
+                        <p class="font-semibold pb-4">Organize</p>
+                        <h1 class="lg:text-[48px] text-[32px] font-bold leading-tight w-full">Easily Find Your Products
+                            in Seconds</h1>
+                        <p class="pt-5 text-[18px]">CatalogBase streamlines your workspace by allowing you to quickly
+                            locate your physical items. No more searching through clutter; everything is just a click
+                            away.</p>
+
+                        <ul class="lg:my-10 my-7 space-y-4">
+
+                            <li class="flex md:items-center gap-3 "><img src="/Docs/Assets/images/box.svg"
+                                    class="max-w-[12px] w-full" alt="">Save time and boost your productivity today.</li>
+                            <li class="flex md:items-center gap-3 "><img src="/Docs/Assets/images/box.svg"
+                                    class="max-w-[12px] w-full" alt="">Never lose track of your inventory again.</li>
+                            <li class="flex md:items-center gap-3 "><img src="/Docs/Assets/images/box.svg"
+                                    class="max-w-[12px] w-full" alt="">Transform your workspace into an organized haven.
+                            </li>
+
+
+                        </ul>
+
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="border border-black text-nowrap px-7 py-3 w-full lg:w-auto hover:bg-black hover:text-white transition-all duration-300 text-black bg-white">Learn
+                                More</button>
+                            <button
+                                class=" text-nowrap px-7 py-3 w-full lg:w-auto transition-all flex items-center gap-3 hover:gap-4 duration-300 text-black bg-white">Sign
+                                Up <i class="fa-solid fa-angle-right pt-0.5"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="lg:max-w-[50%] w-full">
+                    <img src="/Docs/Assets/images/header.png" class="w-full" alt="">
+                </div>
+
+            </div>
+
+            <div class="md:py-14 py-10"></div>
+
+            <div class="flex items-center justify-center lg:gap-14 gap-8 w-full lg:flex-row flex-col">
+
+                <div class="lg:max-w-[50%] w-full">
+                    <div class="max-w-[616px] w-full">
+                        <div class="grid md:grid-cols-2 w-full gap-x-10 md:gap-y-14 gap-y-10">
+
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Easily Find
+                                    Your
+                                    Products
+                                    in Seconds</h2>
+                                <p class="pt-3">Easily manage your product listings with our intuitive digital catalog
+                                    system.</p>
+                            </div>
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Boost Your
+                                    Sales</h2>
+                                <p class="pt-3">Attract more customers with stunning visuals and detailed product
+                                    descriptions.</p>
+                            </div>
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Save Time
+                                    Daily</h2>
+                                <p class="pt-3">Quickly find and update your inventory without the hassle.</p>
+                            </div>
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Sync with
+                                    Etsy</h2>
+                                <p class="pt-3">Keep your listings current and accurate with seamless integration.</p>
+                            </div>
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Short heading
+                                    here</h2>
+                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius enim in eros.</p>
+                            </div>
+                            <div class="">
+                                <img src="/Docs/Assets/images/box.svg" class="max-w-[36px] w-full" alt="">
+                                <h2 class="lg:text-[24px] text-[20px] font-bold leading-tight pt-4 w-full">Short heading
+                                    here</h2>
+                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    varius enim in eros.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center mt-8 gap-2">
+                            <button
+                                class="border border-black text-nowrap px-7 py-3 w-full lg:w-auto hover:bg-black hover:text-white transition-all duration-300 text-black bg-white">Learn
+                                More</button>
+                            <button
+                                class=" text-nowrap px-7 py-3 w-full lg:w-auto transition-all flex items-center gap-3 hover:gap-4 duration-300 text-black bg-white">Sign
+                                Up <i class="fa-solid fa-angle-right pt-0.5"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="lg:max-w-[50%] w-full">
+                    <img src="/Docs/Assets/images/header.png" class="w-full" alt="">
+                </div>
+
+            </div>
+
+            <div class="md:py-14 py-8"></div>
+
+            <div class="flex items-center justify-between md:flex-row flex-col gap-5 w-full">
+                <div class="w-full">
+                    <h2 class="md:text-[40px] text-[32px] font-bold">Transform Your Etsy Selling Today</h2>
+                    <p class="md:text-lg">Experience effortless inventory management with CraftCatalog. </p>
+                </div>
+
+                <div class="flex items-center md:w-auto w-full gap-3">
+                    <button
+                        class="border border-black text-nowrap px-7 py-3 lg:w-auto bg-black text-white transition-all duration-300 hover:text-black hover:bg-white">Sign
+                        Up</button>
+                    <button
+                        class="border border-black text-nowrap px-7 py-3 lg:w-auto hover:bg-black hover:text-white transition-all duration-300 text-black bg-white">Learn
+                        More</button>
+                </div>
+
+            </div>
+
+            <div class="border border-black md:p-10 p-5 mt-20">
+
+                <div class="flex  w-full justify-between lg:flex-row flex-col gap-10">
+
+                    <div class="max-w-[500px] w-full">
+                        <img src="/Docs/Assets/images/Logo.svg" class="max-w-[70px] w-full" alt="">
+                        <p class="py-4">Subscribe to our newsletter for the latest features and product updates.</p>
+                        <div class="flex items-center gap-2 mt-2 mb-4 lg:flex-row flex-col">
+                            <input type="text" class="w-full lg:max-w-[396px] p-3 border border-black"
+                                placeholder="Your Email Here" name="" id="">
+                            <button
+                                class="border border-black text-nowrap px-5 py-3 w-full lg:w-auto hover:bg-black hover:text-white transition-all duration-300 text-black bg-white">Subscribe</button>
+                        </div>
+
+                        <p>By subscribing, you consent to our Privacy Policy and agree to receive updates.</p>
+                    </div>
+
+                    <div class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1 grid w-full md:gap-5 gap-10 max-w-[588px]">
+                        <div class="">
+                            <h2 class="font-semibold md:mb-6 mb-4">Quick Links</h2>
+
+                            <ul class="space-y-2">
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Help Center</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Contact Us</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Blog Posts</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> FAQ Section</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> User Guide</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="font-semibold md:mb-6 mb-4">Resources</h2>
+
+                            <ul class="space-y-2">
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Etsy Integration</a>
+                                </li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Product Tips</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Success Stories</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Webinars</a></li>
+                                <li><a href="#" class="transition-all duration-300 hover:pl-3"> Community Forum</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h2 class="font-semibold md:mb-6 mb-4">Stay Connected</h2>
+
+                            <ul class="space-y-3">
+                                <li><a href="#"
+                                        class="transition-all duration-300 flex items-center gap-4 hover:gap-5"><i
+                                            class="fa-brands fa-facebook text-2xl"></i> Facebook </a></li>
+                                <li><a href="#"
+                                        class="transition-all duration-300 flex items-center gap-4 hover:gap-5"><i
+                                            class="fa-brands fa-instagram text-2xl"></i> Instagram </a></li>
+                                <li><a href="#"
+                                        class="transition-all duration-300 flex items-center gap-4 hover:gap-5"><i
+                                            class="fa-brands fa-x-twitter text-2xl"></i> X </a></li>
+                                <li><a href="#"
+                                        class="transition-all duration-300 flex items-center gap-4 hover:gap-5"><i
+                                            class="fa-brands fa-linkedin text-2xl"></i> LinkedIn </a></li>
+                                <li><a href="#"
+                                        class="transition-all duration-300 flex items-center gap-4 hover:gap-5"><i
+                                            class="fa-brands fa-youtube text-2xl"></i> YouTube </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="flex items-center mt-5 justify-between gap-5">
+                <p class="text-sm">© 2024 CraftCatalog. All rights reserved.</p>
+
+                <ul class="flex gap-5">
+                    <li><a href="#" class="underline hover:text-zinc-700 transition-all duration-300">Privacy Policy</a>
+                    </li>
+                    <li><a href="#" class="underline hover:text-zinc-700 transition-all duration-300">Terms of
+                            Service</a></li>
+                    <li><a href="#" class="underline hover:text-zinc-700 transition-all duration-300">Cookie
+                            Settings</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="md:py-7 py-4"></div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis();
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+</script>
+
+</html>
