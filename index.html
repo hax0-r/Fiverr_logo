@@ -28,44 +28,33 @@
             <img src="/Docs/Assets/images/Logo.svg" class="max-w-[70px] w-full" alt="">
             <a href="#" class="sm:block hidden navUnderLine">Home Page</a>
             <i class="fa-solid fa-bars text-2xl cursor-pointer fadeIn sm:hidden" id="openNav"></i>
-            <i class="fa-solid fa-x text-xl cursor-pointer fadeIn"  style="display: none;" id="closeNav"></i>
-
         </div>
     </nav>
 
     <!-- responsive -->
 
-    <div class="w-screen responsiveNav transition-all duration-500 bg-white fixed bottom-0 z-50 overflow-hidden  left-0" style="width: 0;" id="responsiveNav">
+    <div class="w-screen h-screen transition-all duration-500 bg-white fixed bottom-0 z-50 overflow-hidden  left-0"
+        style="width: 0;" id="responsiveNav">
 
         <div class="p-5">
-            <ul class="">
-                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Home Page</a></li>
+
+            <div class="flex items-center justify-between">
+                <img src="/Docs/Assets/images/Logo.svg" class="max-w-[70px] w-full" alt="">
+                <i class="fa-solid fa-x text-xl cursor-pointer fadeIn" id="closeNav"></i>
+            </div>
+
+            <ul class="mt-10">
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Home Page</a>
+                </li>
                 <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Two</a></li>
-                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Three</a></li>
-                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Four</a></li>
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Three</a>
+                </li>
+                <li><a href="" class="text-lg block py-3 transition-all duration-500 hover:underline"> Link Four</a>
+                </li>
             </ul>
         </div>
 
     </div>
-
-    <script>
-        const responsiveNav = document.getElementById("responsiveNav")
-        const closeNav = document.getElementById("closeNav")
-        const openNav = document.getElementById("openNav")
-
-        openNav.addEventListener('click',()=>{
-            responsiveNav.style.width = "100%"
-            closeNav.style.display = "block"
-            openNav.style.display = "none"
-        })
-        closeNav.addEventListener('click',()=>{
-            responsiveNav.style.width = "0%"
-            openNav.style.display = "block"
-            closeNav.style.display = "none"
-        })
-        
-    </script>
-
     <div class="lg:px-10 p-4">
         <div class="max-w-[1320px] w-full mx-auto">
 
@@ -385,6 +374,18 @@
 
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
+            const responsiveNav = document.getElementById("responsiveNav")
+        const closeNav = document.getElementById("closeNav")
+        const openNav = document.getElementById("openNav")
+
+        openNav.addEventListener('click', () => {
+            responsiveNav.style.width = "100%"
+        })
+        closeNav.addEventListener('click', () => {
+            responsiveNav.style.width = "0%"
+        })
+
+    
     const lenis = new Lenis();
     function raf(time) {
         lenis.raf(time);
